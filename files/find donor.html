@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en"></html>
+
+<head>
+    <title>
+        Find Donor
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+<style>
+
+
+.header {
+  background-color: #6cd0e9;
+  padding: 3px;
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  left: 410px;
+  top: 32px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+.cl {
+  background-color: lightblue;
+}
+
+
+.sansserif {
+  font-family: "Verdana";
+  font-size: 23px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 12%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+    background-color: #6cd0e9;
+    padding: 60px;
+    text-align: center; 
+  }
+
+/* Responsive layout - when the screen is less than 600px wide,the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body style="background-color: #e9b0b0;">
+  <div class="header">
+    <h1><a style="text-decoration: none;color:black"href="homepage.html"><img class="img1" src="images/logo.png" alt="logo" style="width:90px;margin:10px; border-radius:45px;"></img>Save A Life<br>
+    Blood Community Centre</a></h1>
+  </div>
+<div class="div1">
+  
+<p class="sansserif">Find your Blood Donor in the time of need :</p>
+<div class="container">
+  <form>
+    <script type="text/javascript">
+      function confirm()
+      {
+         document.getElementById("button1").value="Submitted";
+      }
+      function check()
+      {
+        if(document.getElementById('dist').value==""||document.getElementById('city').value=="")
+        {
+          alert("Your form is incomplete");
+          return false;
+        }
+        return true;
+      }
+      </script>
+  <div class="row">
+    <div class="col-25">
+      <label for="bgroup">Blood group</label>
+    </div>
+    <div class="col-75">
+      <select id="bgroup" name="bgroup">
+        <option value="a+">A+</option>
+        <option value="a-">A-</option>
+        <option value="b+">B+</option>
+        <option value="b-">B-</option>
+        <option value="o+">O+</option>
+        <option value="o-">O-</option>
+        <option value="ab+">AB+</option>
+        <option value="ab-">AB-</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="state">Select State</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="state">Andhra Pradesh	</option>
+        <option value="state">Arunachal Pradesh	</option>
+        <option value="state">Assam</option>
+        <option value="state">Bihar</option>
+        <option value="state">Chhattisgarh</option>
+        <option value="state">Goa</option>
+        <option value="state">Gujarat</option>
+        <option value="state">Haryana</option>
+        <option value="state">Himachal Pradesh	</option>
+        <option value="state">Mizoram</option>
+        <option value="state">Jharkhand</option>
+        <option value="state">Karnataka</option>
+        <option value="state">Kerela</option>
+        <option value="state">Madhya Pradesh	</option>
+        <option value="state">Maharashtra</option>
+        <option value="state">Manipur</option>
+        <option value="state">Meghalaya</option>
+        <option value="state">Nagaland</option>
+        <option value="state">Odisha</option>
+        <option value="state">Punjab</option>
+        <option value="state">Rajasthan</option>
+        <option value="state">Sikkim</option>
+        <option value="state">Tamil Nadu</option>
+        <option value="state">Tripura</option>
+        <option value="state">Telangana</option>
+        <option value="state">Uttar Pradesh</option>
+        <option value="state">Uttarakhand</option>
+        <option value="state">West Bengal</option>  
+        <option value="state">Andaman and Nicobar Islands	 (UT)</option>  
+        <option value="state">Chandigarh (UT)</option>   
+        <option value="state">Dadra & Nagar Haveli and Daman & Diu (UT)</option>   
+        <option value="state">Delhi (UT)</option>   
+        <option value="state">Jammu and Kashmir	(UT)</option>   
+        <option value="state">Lakshadweep (UT)</option>   
+        <option value="state">Puducherry (UT)</option>   
+        <option value="state">Ladakh (UT)</option>   
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="dist">District</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="dist" name="dist" placeholder="Enter District..." required/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="city">City</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="city" name="city" placeholder="Enter City..." required/>
+    </div>
+  </div>
+
+  
+
+  <div class="row">
+    <div class="col-25">
+      <label for="plasma">Select COVID-19 Plasma Donor</label>
+    </div>
+    <div class="col-75">
+      <input type="radio" id="yes" name="gensaader" value="male">
+  <label for="male">Yes</label> /
+  <input type="radio" id="no" name="gensaader" value="male">
+  <label for="male">No</label>
+       
+      </select>
+    </div>
+  </div>
+  
+  <div class="row">
+    
+    <input type="button" onclick="confirm(); return check();" value="Submit" id="button1"></input>
+  </div>
+  </form>
+</div>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

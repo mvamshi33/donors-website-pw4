@@ -1,0 +1,158 @@
+body {
+	font-family: arial;
+	margin:0px
+}	
+input {
+	outline:0px
+}
+#loginbackground {
+	background-image:url('images/loginbanner.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#logintable {
+	background-color:white;
+	width:400px;
+	margin-top:230px;
+	padding:20px;
+	margin-right:200px;
+	border-radius:5px;
+}
+#user {
+	background-image:url('images/user.png');
+	width:16px;
+	height:16px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	position:absolute;
+	margin-top:5px;
+	margin-left:7px;
+}
+#key {
+	background-image:url('images/key.png');
+	width:16px;
+	height:16px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	position:absolute;
+	margin-top:4px;
+	margin-left:7px
+}
+#username,
+#password,
+#button {
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:4px;
+	padding-bottom:4px;
+	border-radius:2px;	
+}
+
+#username,
+#password{
+	padding-left:30px;
+	border:1px solid #787878
+}	
+#button {
+	background-color:blue;
+	color:white;
+	font-size:16px;
+	font-weight:bold;
+	cursor:pointer;
+}
+#tableclass{
+	width:100%;
+	border-collapse:collapse;
+}
+#textblue{
+	color:skyblue;
+}
+#name,
+#phonenumber,
+#age,
+#bloodgroup,
+#gender,
+#emailid,
+#lastdonatedate {
+	width:250px;
+	border-radius:2px;
+	padding:4px;	
+	border:1px solid #b2b2b2
+}
+
+#bloodgroup,
+#gender {
+	width:260px
+}
+#username:focus,
+#password:focus,
+#name:focus,
+#phonenumber:focus,
+#age:focus,
+#bloodgroup:focus,
+#gender:focus,
+#emailid:focus,
+#lastdonatedate:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+#submitbutton{    
+	color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+	font-size:14px;
+	cursor:pointer;
+	border-radius:3px;
+	padding:5px 15px;
+	outline:0
+}		
+#submitbutton:focus,
+#submitbutton:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+#divblock {
+	width:800px;
+}
+#divblock p{
+	font-size:15px;
+	text-align:left;
+	font-weight:normal;
+	line-height:24px;
+}
+#tdblock {
+    border: 1px solid #b2b2b2;
+	 background: #fcfcfc;
+	 padding:20px;
+	 border-radius:4px
+}
+
+td label {
+	font-size:12px;
+}
+.radio {
+	font-size:12px
+}
+#tdblock table tr td {
+	padding:5px;
+	width:250px
+}
+.error {
+	color:red;
+	padding-top:5px;
+	font-size:12px;
+	float:left;
+	clear:both;
+}
+
+	
+
+
+
+
+	

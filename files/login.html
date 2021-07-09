@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<title>Login</title>
+			<link rel="stylesheet" href="stylesheet.css" />
+		</head>
+		<body id="loginbackground">
+		<form name="loginform" onSubmit="return validateform();" action="login.html" method="post">
+	<table id="logintable" align="right" cellpadding="4">
+			<tr>
+				<td  align="right">
+				   <img src="images/logo.png" width="70" />
+				</td>
+				<td align="left">
+				<b> Save a life 
+			 <br> Blood Community Center</b>  
+			 
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<label><b>Username</b></label>
+				</td>
+				<td>
+				    <div id="user"> </div>
+					<input type="text" id="username" name="username" />
+					<span class="error" id="errorusename"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label><b>Password</b></label>
+				</td>
+				<td>
+                    <div id="key"> </div>				
+				    <input type="password" id="password" name="password" />
+					<span class="error" id="errorpassword"></span>
+				</td>
+			</tr>
+			<tr>
+			    <td colspan="2">
+				<b>Dont have an account? <a href="register.html">Sign In</a></b>
+				</td>
+			</tr>
+			<tr>
+                <td colspan="2" align="center">
+				<input id="button" type="submit" value="Login">
+				</td>
+			</tr>	
+			
+                 				
+				
+				   
+	</table>
+	</form>
+	
+	<script>
+		function validateform(){  
+		var name=document.loginform.username.value;  
+		var password=document.loginform.password.value;  
+		  
+		if (name==null || name==""){  
+			document.loginform.username.focus();
+			document.getElementById("errorusename").innerHTML  = "Enter username";
+		  return false;  
+		}else if(password.length<8){  
+			document.loginform.password.focus();
+			document.getElementById("errorpassword").innerHTML  = "Password must be at least 8 characters long";
+		  return false;  
+		  }  
+		}  
+	</script>
+	</body>
+</html>

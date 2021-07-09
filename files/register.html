@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Register From</title>
+<link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+<table id="tableclass" cellpadding="12">
+<thead>
+<tr bgcolor="skyblue">
+		<th colspan="2" align="left" style="padding:25px 0;">
+		<a style="text-decoration: none;color:black"href="homepage.html"> <img src="images/logo.png" width="70" style="float:left;margin-left:520px;margin-right:10px" />
+		<p style="margin:9px"><b>Save a life 
+	    <br> Blood Community Center</b> </a> </p>
+			 
+				</th>
+<th>
+				  
+				</th>
+</tr>
+<tr bgcolor="#e1f2f9">
+<th colspan="3"><h1><u><b id="textblue">REGISTER YOURSELF TO</b><b> SAVE A LIFE</b></u></h1></th>
+</tr>
+<tr>
+    <th colspan="3">
+	     <div id="divblock">
+		 <p>Please fill the following information to register as voluntary blood donor and become part of F2S vision. Kindly update your date of donation once done, so that your name will be hidden automatically till next 3 Months. Also please update your profile/information if in case you relocate in future.</p>
+		</div>
+	</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td colspan="2" >
+		<div  id="tdblock">
+			<form name="loginform" onSubmit="return validateform();" action="register.html" method="post">
+		<table>
+			<tr>
+				<td>
+					 <label>Name* </label>
+				</td>
+				<td>
+					 <input type="text" id="name" name="name" placeholder="Enter your name..." />
+				</td>
+				<td><span class="error" id="errorname"></span></td>
+			</tr>
+			<tr>	
+				<td>
+					<label>Phone Number*</label>
+				</td>
+				<td>
+					<input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your mobile number..." class="form-control" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);">
+				</td>
+				<td><span class="error" id="errorphonenumber"></span></td>
+			</tr>
+			<tr>	
+				<td>
+					<label>Age*</label>
+				</td>
+				<td>
+					<input type="number" id="age" name="age" placeholder="Enter your age..." maxlength="2" />
+				</td>
+				<td><span class="error" id="errorage"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Blood group*</label>
+				</td>
+				<td>
+					<select id="bloodgroup" name="bloodgroup">
+						<option value="">Select</option>
+						<option value="A1+"> A1+ </option>
+						<option value="A1-"> A1- </option>
+						<option value="A2+"> A2+ </option>
+						<option value="A2-"> A2- </option>
+						<option value="B+"> B+ </option>
+						<option value="B-"> B- </option>
+						<option value="A1B+"> A1B+ </option>
+						<option value="A1B-"> A1B- </option>
+						<option value="A2B+"> A2B+ </option>
+						<option value="A2B-"> A2B- </option>
+						<option value="AB+"> AB+ </option>
+						<option value="AB-"> AB- </option>
+						<option value="O+"> O+ </option>
+						<option value="O-"> O- </option>
+						<option value="A+"> A+ </option>
+						<option value="A-"> A- </option>
+					</select>
+				</td>
+				<td><span class="error" id="errorbloodgroup"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Gender* </label>
+				</td>
+				<td>	
+					<select id="gender" name="gender">
+						<option value="">Select</option>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
+				</td>	
+				<td><span class="error" id="errorgender"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Covid recovered* </label>
+				</td>
+				<td>	
+					<div class="radio">
+						<input type="radio" name="covid" value="YES"/>YES
+						<input type="radio" name="covid" value="NO" />NO
+					</div>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<label>Email id*<label>
+				</td>
+				<td>
+					<input type="text"  id="emailid" name="emailid" placeholder="Enter valid email-id..." />
+				</td>
+				<td><span class="error" id="erroremailid"></span></td>
+			</tr>
+			
+			<tr>
+				<td>
+					<label>Last donate date*</label>
+				</td>
+				<td>
+					<input type="date" id="lastdonatedate" name="lastdonatedate" />
+				</td>
+				<td><span class="error" id="errorlastdonatedate"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Occupation*</label>
+				</td>
+				<td>
+						<div class="radio">
+						<input type="radio" name="OCCUPATION" value="MEDICALWORKER"/>MEDICAL WORKER
+				<br>	<input type="radio" name="OCCUPATION" value="STUDENT" />STUDENT
+				<br>	<input type="radio" name="OCCUPATION" value="OTHERS" />OTHERS 
+						</div>				
+				</td>	
+			</tr>
+			<tr>
+				<td colspan="3" align="left">
+					<button id="submitbutton" type="submit">Submit</button>	
+				</td>
+			</tr>	
+		</table>
+		</form>
+		</div>
+	</td>
+	
+	
+	<td>
+		<img src="images/banner.jpg" height="400px" />
+	</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<script>
+	function validateform(){  
+	var name=document.loginform.name.value;  
+	var phno=document.loginform.phonenumber.value; 
+	var age=document.loginform.age.value;  
+	var bloodgrp=document.loginform.bloodgroup.value;
+	var gen=document.loginform.gender.value;  
+	var emid=document.loginform.emailid.value;  
+	var ldate=document.loginform.lastdonatedate.value;  
+	
+	
+		if (name==null || name==""){  
+			document.loginform.name.focus();
+			document.getElementById("errorname").innerHTML  = "Enter your full name";
+		  return false;  
+		}
+		if (phno.length != 10){  
+			document.loginform.phonenumber.focus();
+			document.getElementById("errorphonenumber").innerHTML  = "Enter your phone number";
+		  return false;  
+		}
+		if (age==null || age==""){  
+			document.loginform.age.focus();
+			document.getElementById("errorage").innerHTML  = "Enter your age";
+		  return false;  
+		}
+		if (bloodgrp == "") {
+			document.loginform.bloodgroup.focus();
+			document.getElementById("errorbloodgroup").innerHTML  = "Select your blood group";
+			return false;
+		}
+		if (gen == "") {
+			document.loginform.gender.focus();
+			document.getElementById("errorgender").innerHTML  = "Select your gender";
+			return false;
+		}
+		if (emid == "") {
+			document.loginform.emailid.focus();
+			document.getElementById("erroremailid").innerHTML  = "Enter your Email ID";
+			return false;
+		}
+		if (ldate == "") {
+			document.loginform.lastdonatedate.focus();
+			document.getElementById("errorlastdonatedate").innerHTML  = "Last donate date";
+			return false;
+		}
+		
+	}  
+	
+	function jm_phonemask(t) {
+    var patt1 = /(\d{3}).*(\d{3}).*(\d{4})/;
+    var patt2 = /^\((\d{3})\).(\d{3})-(\d{4})$/;
+    var str = t.value;
+    if (str[0] == 1) {
+        str = str.substring(1);
+        t.value = t.value.substring(1);
+    }
+    var result;
+    if (!str.match(patt2)) {
+        result = str.match(patt1);
+        if (result != null) {
+            t.value = t.value.replace(/[^\d]/gi, "");
+            str = "" + result[1] + "" + result[2] + "" + result[3];
+            t.value = str;
+        } else {
+            if (t.value.match(/[^\d]/gi)) t.value = t.value.replace(/[^\d]/gi, "");
+        }
+    }
+}
+function phonecheck(Stringval) {
+    var strChar0 = Stringval.charAt(0);
+    var strChar4 = Stringval.charAt(4);
+    var strChar8 = Stringval.charAt(9);
+    var strlength = Stringval.length;
+    if (strChar0 != "" || strChar4 != "" || strChar8 != "" || strlength != 14) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+</script>
+
+</body>
+</html>
